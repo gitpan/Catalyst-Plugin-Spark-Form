@@ -2,9 +2,12 @@ use strict;
 use warnings;
 
 package Catalyst::Plugin::Spark::Form;
-our $VERSION = '0.01000001';
-
-
+BEGIN {
+  $Catalyst::Plugin::Spark::Form::AUTHORITY = 'cpan:KENTNL';
+}
+{
+  $Catalyst::Plugin::Spark::Form::VERSION = '0.01000002';
+}
 
 # ABSTRACT: A simple plug-in to make forms accessible quickly off the CTX.
 
@@ -34,8 +37,8 @@ no Moose::Role;
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -44,7 +47,7 @@ Catalyst::Plugin::Spark::Form - A simple plug-in to make forms accessible quickl
 
 =head1 VERSION
 
-version 0.01000001
+version 0.01000002
 
 =head1 SYNOPSIS
 
@@ -59,29 +62,17 @@ version 0.01000001
 
   }
 
-=cut
-
-=pod
-
 =head1 METHODS
 
 =head2 form
 
   $ctx->form( $formname )
 
-=cut
-
-=pod
-
 =head1 CREDITS
 
 Code thrown together by James Laver L<http://jameslaver.com>.
 
 Code stolen from $c->controller.
-
-=cut
-
-=pod
 
 =head1 DISCLAIMER
 
@@ -93,10 +84,9 @@ Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Kent Fredric.
+This software is copyright (c) 2012 by Kent Fredric.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
